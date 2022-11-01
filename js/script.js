@@ -65,6 +65,8 @@
         }
 
         addNewTask(newTaskContent);
+        document.querySelector(".js-form").reset();
+        document.querySelector(".js-newTask").focus();
     };
 
     const init = () => {
