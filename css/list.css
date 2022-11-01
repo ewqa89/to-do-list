@@ -1,0 +1,47 @@
+.list {
+    list-style: none;
+    border-bottom: 2px solid gainsboro;
+    padding: 20px;
+    margin: 0;
+    display: flex;
+    width: 100%;
+}
+
+.list__item {
+    padding: 0px 5px;
+    order: 2;
+    flex: auto;
+    align-self: center;
+}
+
+.button__done {
+    background-color: green;
+    color: white;
+    min-height: 30px;
+    min-width: 30px;
+    order: 1;
+    align-self: center;
+    border: none;
+}
+
+.button__done:active {
+    border: 2px solid black;
+}
+
+.list__item--done {
+    text-decoration: line-through;
+}
+
+.button__remove {
+    background-color: red;
+    color: white;
+    min-height: 30px;
+    min-width: 30px;
+    order: 3;
+    align-self: center;
+    border: none;
+}
+
+.button__remove:active {
+    border: 2px solid black;
+}

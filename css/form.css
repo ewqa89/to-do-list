@@ -1,0 +1,25 @@
+.form {
+    max-width: 100%;
+}
+
+.form__fildset {
+    display: flex;
+    flex-wrap: wrap;
+    border: none;
+}
+
+.form__input {
+    border: 2px solid gainsboro;
+    padding: 10px;
+    margin: 10px;
+    flex-grow: 7;
+}
+
+.form__button {
+    background-color: teal;
+    color: white;
+    padding: 10px;
+    border: none;
+    margin: 10px;
+    flex-grow: 1;
+}
