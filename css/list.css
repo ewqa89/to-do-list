@@ -14,7 +14,7 @@
     align-self: center;
 }
 
-.button__done {
+.list__button--done {
     background-color: green;
     color: white;
     min-height: 30px;
@@ -24,7 +24,7 @@
     border: none;
 }
 
-.button__done:active {
+.list__button--done:active {
     border: 2px solid black;
 }
 
@@ -32,7 +32,7 @@
     text-decoration: line-through;
 }
 
-.button__remove {
+.list__button--remove {
     background-color: red;
     color: white;
     min-height: 30px;
@@ -42,6 +42,6 @@
     border: none;
 }
 
-.button__remove:active {
+.list__button--remove:active {
     border: 2px solid black;
 }
