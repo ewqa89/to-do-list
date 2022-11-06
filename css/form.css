@@ -1,18 +1,23 @@
 .form {
-    max-width: 100%;
+    padding: 20px;
 }
 
 .form__fildset {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-gap: 20px;
     border: none;
+}
+
+@media (max-width: 767px) {
+    .form__fildset {
+        grid-template-columns: 1fr;
+    }
 }
 
 .form__input {
     border: 2px solid gainsboro;
     padding: 10px;
-    margin: 10px;
-    flex-grow: 7;
 }
 
 .form__button {
@@ -20,6 +25,12 @@
     color: white;
     padding: 10px;
     border: none;
-    margin: 10px;
-    flex-grow: 1;
+}
+
+.form__button:hover {
+    background-color: rgb(1, 145, 145);
+}
+
+.form__button:active {
+    background-color: rgb(0, 165, 165);
 }

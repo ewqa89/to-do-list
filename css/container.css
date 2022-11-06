@@ -1,6 +1,7 @@
 .container {
-    margin: 30px 0;
+    margin: 10px 0;
     background-color: white;
+    box-shadow: 0 0 5px gainsboro;
 }
 
 .container__header {
@@ -12,4 +13,5 @@
 .container__ul {
     padding: 20px;
     margin: 0;
+    list-style: none;
 }
