@@ -1,0 +1,24 @@
+.buttons__button {
+    border: none;
+    background: transparent;
+    color: teal;
+    font-weight: 500;
+    transition: 1s;
+}
+
+.buttons__button:disabled {
+    color: gainsboro;
+    transition: none;
+}
+
+.buttons__button:hover {
+    color: rgb(0, 165, 165);
+}
+
+.buttons__button:active {
+    color: hsl(180, 100%, 50%);
+}
+
+.container__paragraph {
+    margin: 0;
+}

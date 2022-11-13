@@ -10,8 +10,30 @@
     border-bottom: 2px solid gainsboro;
 }
 
+.container__div {
+    padding: 20px;
+    margin: 0;
+    border-bottom: 2px solid gainsboro;
+}
+
+.container__div--homework {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    grid-gap: 10px;
+}
+
+@media (max-width: 767px) {
+    .container__div--homework {
+        grid-template-columns: 1fr;
+    }
+}
+
 .container__ul {
     padding: 20px;
     margin: 0;
     list-style: none;
 }
+
+.container__head {
+    margin: 0;
+    }
