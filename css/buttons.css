@@ -11,14 +11,13 @@
     transition: none;
 }
 
-.buttons__button:hover {
-    color: rgb(0, 165, 165);
+.buttons__button:hover:enabled {
+    color: rgb(0, 167, 167);
 }
 
-.buttons__button:active {
+.buttons__button:active:enabled {
     color: hsl(180, 100%, 50%);
 }
-
 .container__paragraph {
     margin: 0;
 }
