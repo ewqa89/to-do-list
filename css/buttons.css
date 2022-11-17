@@ -19,5 +19,19 @@
     color: hsl(180, 100%, 50%);
 }
 .container__paragraph {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     margin: 0;
+}
+
+@media (max-width: 767px) {
+    .container__paragraph{
+    grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 767px) {
+    .buttons__button{
+    padding: 10px;
+    }
 }
