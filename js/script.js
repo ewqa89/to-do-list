@@ -45,9 +45,12 @@
         for (const task of tasks) {
             htmlSring += `
             <li class="list ${(hideDoneTasks && task.done) ? "list__hidden" : ""}">
-            <button class="list__button list__button--done js-done">${task.done ? "✔" : ""}</button>
-            <span class="list__item ${task.done ? "list__item--done" : ""}">${task.content}</span>
-            <button class="list__button list__button--remove js-remove">🗑</button>
+            <button class="list__button list__button--done js-done">${task.done ? "✔" : ""}
+            </button>
+            <span class="list__item ${task.done ? "list__item--done" : ""}">${task.content}
+            </span>
+            <button class="list__button list__button--remove js-remove">🗑
+            </button>
             </li>
     `;
         }
@@ -55,24 +58,14 @@
         document.querySelector(".js-tasks").innerHTML = htmlSring;
     };
 
-    const chackingAllNotDone = () => {
-        for (const task of tasks) {
-            if (!task.done) {
-                return true;
-            };
-        };
-    };
-
     const renderButtons = () => {
         let htmlSring = "";
 
         if (tasks.length > 0) {
             htmlSring = `
-                <button class="buttons__button js-hideButtonTasks">${hideDoneTasks ? "Pokaż ukończone" : "Ukryj ukończone"}</button>
-                <button class="buttons__button js-completeButtonTasks" ${chackingAllNotDone() ? "" : "disabled"}>Ukończ wyszystkie</button>
+            <button class="buttons__button js-completeButtonTasks" ${tasks.every((task) => task.done) ? "" : "disabled"}>Ukończ wyszystkie
+            </button>
                 `;
-        } else {
-            htmlSring = ``;
         };
         document.querySelector(".js-buttons").innerHTML = htmlSring;
     };
