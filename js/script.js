@@ -63,7 +63,9 @@
 
         if (tasks.length > 0) {
             htmlSring = `
-            <button class="buttons__button js-completeButtonTasks" ${tasks.every((task) => task.done) ? "" : "disabled"}>Ukończ wyszystkie
+            <button class="buttons__button js-hideButtonTasks">${hideDoneTasks ? "Pokaż ukończone" : "Ukryj ukończone"}
+            </button>
+            <button class="buttons__button js-completeButtonTasks" ${tasks.every((task)=>task.done) ? "disabled" : ""}>Ukończ wyszystkie
             </button>
                 `;
         };
