@@ -12,12 +12,22 @@
     };
 
     const removeTask = (taskIndex) => {
-        tasks = [...tasks.slice(0, +taskIndex), ...tasks.slice(+taskIndex + 1)];
+        tasks = [
+            ...tasks.slice(0, +taskIndex), 
+            ...tasks.slice(+taskIndex + 1),
+        ];
         render();
     };
 
     const toggleTaskDone = (taskIndex) => {
-        tasks[taskIndex].done = !tasks[taskIndex].done;
+        tasks = [
+        ...tasks.slice(0, taskIndex),
+        {
+        ...tasks[taskIndex],
+        done: !tasks[taskIndex].done,
+        },
+        ...tasks.slice(+taskIndex + 1),
+    ];
         render();
     };
 
@@ -45,7 +55,8 @@
         for (const task of tasks) {
             htmlSring += `
             <li class="list ${(hideDoneTasks && task.done) ? "list__hidden" : ""}">
-            <button class="list__button list__button--done js-done">${task.done ? "✔" : ""}
+            <button class="list__button list__button--done js-done">
+            ${task.done ? "✔" : ""}
             </button>
             <span class="list__item ${task.done ? "list__item--done" : ""}">${task.content}
             </span>
@@ -65,7 +76,9 @@
             htmlSring = `
             <button class="buttons__button js-hideButtonTasks">${hideDoneTasks ? "Pokaż ukończone" : "Ukryj ukończone"}
             </button>
-            <button class="buttons__button js-completeButtonTasks" ${tasks.every((task)=>task.done) ? "disabled" : ""}>Ukończ wyszystkie
+            <button class="buttons__button js-completeButtonTasks" 
+            ${tasks.every((task)=>task.done) ? "disabled" : ""}>
+            Ukończ wyszystkie
             </button>
                 `;
         };
