@@ -20,7 +20,7 @@
     transition: 1s;
 }
 
-.list__button--done{
+.list__button--done {
     background-color: green;
 }
 
